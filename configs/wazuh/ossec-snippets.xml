@@ -1,0 +1,18 @@
+<!--
+  Excerpts to merge into /var/ossec/etc/ossec.conf on the Wazuh manager (SOC VM).
+  Replace <N8N_HOST> with the address of the machine running n8n.
+-->
+
+<!-- Wazuh -> n8n: forward alerts of level >= 5 to the SOAR webhook -->
+<integration>
+  <name>custom-webhook</name>
+  <hook_url>http://<N8N_HOST>:5678/webhook/wazuh-alert</hook_url>
+  <level>5</level>
+  <alert_format>json</alert_format>
+</integration>
+
+<!-- Ingest Suricata alerts (EVE JSON) -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>
