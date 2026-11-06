@@ -288,3 +288,4 @@ Released under the [MIT License](LICENSE).
 
 The Wazuh, Suricata (OISF), n8n, pfSense (Netgate), and ZeroTier teams, Groq, and Meta (Llama 3.3). The open-source community made a professional-grade lab possible.
 "# SocPilot" 
+"# Ai-powered-Soc" 
